@@ -1,0 +1,11 @@
+{
+  "name": "facebook-post-parser",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "playwright": "^1.54.0"
+  }
+}
