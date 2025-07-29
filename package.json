@@ -1,11 +1,11 @@
 {
-  "name": "facebook-post-parser",
+  "name": "facebook-post-text",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "vercel dev"
   },
   "dependencies": {
-    "playwright": "^1.54.0"
+    "playwright-aws-lambda": "^0.6.0"
   }
 }
