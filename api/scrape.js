@@ -1,4 +1,4 @@
-import { chromium } from "playwright";
+import playwright from "playwright-aws-lambda";
 
 export default async function handler(req, res) {
   const { url } = req.query;
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const browser = await chromium.launch({ headless: true });
+    const browser = await playwright.launchChromium({ headless: true });
     const context = await browser.newContext();
     const page = await context.newPage();
 
