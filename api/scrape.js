@@ -1,4 +1,4 @@
-import playwright from "playwright-aws-lambda";
+import { launchChromium } from "playwright-aws-lambda";
 
 export default async function handler(req, res) {
   const { url } = req.query;
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const browser = await playwright.launchChromium({ headless: true });
+    const browser = await launchChromium({ headless: true });
     const context = await browser.newContext();
     const page = await context.newPage();
 
@@ -43,3 +43,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "擷取失敗", details: err.message });
   }
 }
+
